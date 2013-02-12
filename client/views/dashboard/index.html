@@ -1,0 +1,27 @@
+<template name="dashboard_index">
+	
+	<div class="span12">
+		<h2>schedules</h2>
+
+		<button class="btn btn-success add" type="button">Add schedule</button>
+	</div>
+
+	<div class="span6">
+		<b>Unpublished</b>
+
+		{{#each unpublished}}
+			<div>{{description}} - <a class="publish">Publish</a> | <a class="remove">remove</a></div>
+	  	{{/each}}
+
+  	</div>
+
+  	<div class="span6">
+  		<b>Published</b>
+
+		{{#each published}}
+			<div>{{description}} - <a class="unpublish">Unpublish</a> | <a class="remove">remove</a></div>
+	  	{{/each}}
+
+  	</div>
+
+</template>
